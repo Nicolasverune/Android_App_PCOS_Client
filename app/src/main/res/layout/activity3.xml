@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/boss2">
+
+    <TextView
+        android:id="@+id/textSexe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Register"
+        android:textColor="#000000"
+        android:layout_margin="10dp"
+        />
+
+    <!--    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient ID"
+        android:id="@+id/TVR1"
+        android:layout_below="@id/textSexe"
+        android:textColor="#000000"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:id="@+id/ETR1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        android:inputType="text"
+        android:lines="1"
+        android:layout_toRightOf="@id/TVR1"
+        android:layout_below="@id/textSexe"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:id="@+id/TVR2"
+        android:layout_below="@id/TVR1"
+        android:textColor="#000000"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:id="@+id/ETR2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="text"
+        android:lines="1"
+        android:layout_toRightOf="@id/TVR2"
+        android:layout_below="@id/TVR1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year of Birth"
+        android:id="@+id/TVR3"
+        android:layout_below="@id/TVR2"
+        android:textColor="#000000"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:id="@+id/ETR3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Year of birth"
+        android:inputType="number"
+        android:lines="1"
+        android:layout_toRightOf="@id/TVR3"
+        android:maxLength="4"
+        android:layout_below="@id/TVR2"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First study visit date"
+        android:id="@+id/TVR4"
+        android:layout_below="@id/TVR3"
+        android:textColor="#000000"
+        android:layout_margin="10dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/RL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/TVR4"
+        >
+
+    <EditText
+        android:id="@+id/ETR4_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="DD"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLength="2"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:id="@+id/TVR5_1"
+        android:layout_toRightOf="@id/ETR4_1"
+        android:textColor="#000000"
+        android:layout_margin="10dp"
+        />
+
+    <EditText
+        android:id="@+id/ETR4_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="MM"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLength="2"
+        android:layout_toRightOf="@id/TVR5_1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:id="@+id/TVR5_2"
+        android:layout_toRightOf="@id/ETR4_2"
+        android:textColor="#000000"
+        android:layout_margin="10dp"
+        />
+
+    <EditText
+        android:id="@+id/ETR4_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="YYYY"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLength="4"
+        android:layout_toRightOf="@id/TVR5_2"
+        />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Follow up study visit date 1"
+        android:id="@+id/TVR5"
+        android:layout_below="@id/RL1"
+        android:textColor="#000000"
+        android:layout_margin="10dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/RL2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/TVR5"
+        >
+
+        <EditText
+            android:id="@+id/ETR5_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="DD"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:id="@+id/TVR6_1"
+            android:layout_toRightOf="@id/ETR5_1"
+            android:textColor="#000000"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/ETR5_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="MM"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="2"
+            android:layout_toRightOf="@id/TVR6_1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:id="@+id/TVR6_2"
+            android:layout_toRightOf="@id/ETR5_2"
+            android:textColor="#000000"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/ETR5_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="YYYY"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="4"
+            android:layout_toRightOf="@id/TVR6_2"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Follow up study visit date 2"
+        android:id="@+id/TVR6"
+        android:layout_below="@id/RL2"
+        android:textColor="#000000"
+        android:layout_margin="10dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/RL3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/TVR6"
+        >
+
+        <EditText
+            android:id="@+id/ETR6_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="DD"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:id="@+id/TVR7_1"
+            android:layout_toRightOf="@id/ETR6_1"
+            android:textColor="#000000"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/ETR6_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="MM"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="2"
+            android:layout_toRightOf="@id/TVR7_1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:id="@+id/TVR7_2"
+            android:layout_toRightOf="@id/ETR6_2"
+            android:textColor="#000000"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/ETR6_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="YYYY"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="4"
+            android:layout_toRightOf="@id/TVR7_2"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diagnosis of PCOS"
+        android:id="@+id/TVR7"
+        android:layout_below="@id/RL3"
+        android:textColor="#000000"
+        android:layout_margin="10dp"
+        />
+    
+    <RelativeLayout
+        android:id="@+id/RL4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TVR7">
+
+
+        <RadioGroup
+            android:id="@+id/RGR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="confirmed"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="not confirmed"/>
+
+        </RadioGroup>
+
+    </RelativeLayout>
+    
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RL4"
+        android:layout_centerHorizontal="true"
+        android:text="Confirm" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confirm"
+        android:layout_centerHorizontal="true"
+        android:text="Login" />
+
+
+</RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">pcos_summer</string>
+    <string name="textView">"HAHA"</string>
+    <string name="edit">"Pseudo"</string>
+    <string name="hello">"Gros"</string>
+    <string name="chapeau_chinois">"\\^"</string>
+</resources>
