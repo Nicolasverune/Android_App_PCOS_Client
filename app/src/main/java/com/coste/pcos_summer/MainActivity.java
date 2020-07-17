@@ -401,21 +401,22 @@ public class MainActivity extends Activity {
             mquest1 = (Button) findViewById(R.id.quest);
             mquest1.setOnClickListener(clickListenerBoutonsMENU);
 
+            RadioGroup radioGroupq1_0;
+            radioGroupq1_0 = (RadioGroup)findViewById(R.id.q1_0);
+            radioGroupq1_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
+            //radioGroupq1_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+            LoadPreferences(Integer.toString(radioGroupq1_0.getId()),radioGroupq1_0);
             RadioGroup radioGroupq1_1;
             radioGroupq1_1 = (RadioGroup)findViewById(R.id.q1_1);
             radioGroupq1_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            radioGroupq1_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+            //radioGroupq1_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
             LoadPreferences(Integer.toString(radioGroupq1_1.getId()),radioGroupq1_1);
             RadioGroup radioGroupq1_2;
             radioGroupq1_2 = (RadioGroup)findViewById(R.id.q1_2);
             radioGroupq1_2.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            radioGroupq1_2.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+            //radioGroupq1_2.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
             LoadPreferences(Integer.toString(radioGroupq1_2.getId()),radioGroupq1_2);
-            RadioGroup radioGroupq1_3;
-            radioGroupq1_3 = (RadioGroup)findViewById(R.id.q1_3);
-            radioGroupq1_3.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            radioGroupq1_3.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
-            LoadPreferences(Integer.toString(radioGroupq1_3.getId()),radioGroupq1_3);
+
 
         }
     };
@@ -436,16 +437,16 @@ public class MainActivity extends Activity {
             mquest1 = (Button) findViewById(R.id.quest);
             mquest1.setOnClickListener(clickListenerBoutonsMENU);
 
+            RadioGroup radioGroupq2_0;
+            radioGroupq2_0 = (RadioGroup)findViewById(R.id.q2_0);
+            radioGroupq2_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
+            //radioGroupq2_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+            LoadPreferences(Integer.toString(radioGroupq2_0.getId()),radioGroupq2_0);
             RadioGroup radioGroupq2_1;
             radioGroupq2_1 = (RadioGroup)findViewById(R.id.q2_1);
             radioGroupq2_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            radioGroupq2_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+            //radioGroupq2_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
             LoadPreferences(Integer.toString(radioGroupq2_1.getId()),radioGroupq2_1);
-            RadioGroup radioGroupq2_2;
-            radioGroupq2_2 = (RadioGroup)findViewById(R.id.q2_2);
-            radioGroupq2_2.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            radioGroupq2_2.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
-            LoadPreferences(Integer.toString(radioGroupq2_2.getId()),radioGroupq2_2);
 
 
         }
@@ -467,16 +468,16 @@ public class MainActivity extends Activity {
             mquest1.setOnClickListener(clickListenerBoutonsMENU);
 
 
+            RadioGroup radioGroupq3_0;
+            radioGroupq3_0 = (RadioGroup)findViewById(R.id.q3_0);
+            radioGroupq3_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
+            //radioGroupq3_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+            LoadPreferences(Integer.toString(radioGroupq3_0.getId()),radioGroupq3_0);
             RadioGroup radioGroupq3_1;
             radioGroupq3_1 = (RadioGroup)findViewById(R.id.q3_1);
             radioGroupq3_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            radioGroupq3_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+            //radioGroupq3_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
             LoadPreferences(Integer.toString(radioGroupq3_1.getId()),radioGroupq3_1);
-            RadioGroup radioGroupq3_2;
-            radioGroupq3_2 = (RadioGroup)findViewById(R.id.q3_2);
-            radioGroupq3_2.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            radioGroupq3_2.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
-            LoadPreferences(Integer.toString(radioGroupq3_2.getId()),radioGroupq3_2);
         }
     };
 
@@ -521,6 +522,7 @@ public class MainActivity extends Activity {
 
     }
 
+    /*
     RadioGroup.OnCheckedChangeListener radioGroupOnCheckedChangeListenerDA =
             new RadioGroup.OnCheckedChangeListener(){
                 @Override
@@ -595,6 +597,7 @@ public class MainActivity extends Activity {
                             aq3_1 = 2 ;
                             break;
                     }}};
+    */
 
     private View.OnClickListener clickListenerBoutonsSend  = new View.OnClickListener() {
         @Override
@@ -782,12 +785,84 @@ public class MainActivity extends Activity {
 
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
-
+                    // When we click on a button, we call this function
+                    // squizzmodifier to modify the final string that will be send
+                    // savepref to save till the user sends, if he wants to change
                     RadioButton checkedRadioButton = (RadioButton)group.findViewById(checkedId);
                     int checkedIndex = group.indexOfChild(checkedRadioButton);
                     SQuizzModifier(getResources().getResourceEntryName(checkedId));
                     SavePreferences(Integer.toString(group.getId()), checkedIndex);
-
+                    //
+                    switch(checkedId) {
+                        case R.id.q1_0_1:
+                            dq1_0 = 1;
+                            aq1_0 = 2 ;
+                            break;
+                        case R.id.q1_0_2:
+                            dq1_0 = 1;
+                            aq1_0 = 2 ;
+                            break;
+                        case R.id.q1_0_3:
+                            dq1_0 = 1;
+                            aq1_0 = 2 ;
+                            break;
+                        case R.id.q1_1_1:
+                            dq1_1 = 1;
+                            aq1_1 = 2 ;
+                            break;
+                        case R.id.q1_1_2:
+                            dq1_1 = 1;
+                            aq1_1 = 2 ;
+                            break;
+                        case R.id.q1_2_1:
+                            dq1_2 = 1;
+                            aq1_2 = 2  ;
+                            break;
+                        case R.id.q1_2_2:
+                            dq1_2 = 1;
+                            aq1_2 = 2 ;
+                            break;
+                        case R.id.q2_0_1:
+                            dq2_0 = 1;
+                            aq2_0 = 2  ;
+                            break;
+                        case R.id.q2_0_2:
+                            dq2_0 = 1;
+                            aq2_0 = 2 ;
+                            break;
+                        case R.id.q2_0_3:
+                            dq2_0 = 1;
+                            aq2_0 = 2 ;
+                            break;
+                        case R.id.q2_1_1:
+                            dq2_1 = 1;
+                            aq2_1 = 2 ;
+                            break;
+                        case R.id.q2_1_2:
+                            dq2_1 = 1;
+                            aq2_1 = 2 ;
+                            break;
+                        case R.id.q2_1_3:
+                            dq2_1 = 1;
+                            aq2_1 = 2 ;
+                            break;
+                        case R.id.q3_0_1:
+                            dq3_0 = 1;
+                            aq3_0 = 2 ;
+                            break;
+                        case R.id.q3_0_2:
+                            dq3_0 = 1;
+                            aq3_0 = 2 ;
+                            break;
+                        case R.id.q3_1_1:
+                            dq3_1 = 1;
+                            aq3_1 = 2  ;
+                            break;
+                        case R.id.q3_1_2:
+                            dq3_1 = 1;
+                            aq3_1 = 2 ;
+                            break;
+                    }
                 }};
 
     private void SQuizzModifier(String name){
@@ -878,7 +953,7 @@ public class MainActivity extends Activity {
 
     private void LoadPreferences(String key,RadioGroup group){
         SharedPreferences sharedPreferences = getSharedPreferences("MY_SHARED_PREF", MODE_PRIVATE);
-        int savedRadioIndex = sharedPreferences.getInt(key, 1);
+        int savedRadioIndex = sharedPreferences.getInt(key, 0);
         RadioButton savedCheckedRadioButton = (RadioButton)group.getChildAt(savedRadioIndex);
         savedCheckedRadioButton.setChecked(true);
     }

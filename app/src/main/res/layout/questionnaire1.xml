@@ -1,128 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-<LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical" >
 
-<TextView
-        android:id="@+id/q1_0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
-        android:text="quest number 1" />
-<TextView
-        
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
-        android:text="Comment ca va ? " />
+		<TextView
+			android:id="@+id/q1_-1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="top|center_horizontal"
+			android:text="quest number 1" />
+		<TextView
 
-<RadioGroup
-        android:id="@+id/q1_1"
-	android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/q1_0"
-        android:orientation="horizontal" >
-        
-<RadioButton
-	android:gravity="center"
-	android:padding="15dp"
-	android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:checked="false"
-	    android:id="@+id/q1_0_1"
-	android:background="@drawable/type1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="top|center_horizontal"
+			android:text="Comment ca va ? " />
 
-	/>
-<RadioButton
-	android:gravity="center"
-	android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:checked="false"
-	    android:id="@+id/q1_0_2"
-	android:background="@drawable/type2"
+		<RadioGroup
+			android:id="@+id/q1_0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/q1_-1"
+			android:orientation="horizontal" >
 
+			<RadioButton
+				android:text="Bien"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:checked="true"
+				android:id="@+id/q1_0_1"
+				/>
+			<RadioButton
+				android:text="Moyen"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:checked="false"
+				android:id="@+id/q1_0_2"
+				/>
+			<RadioButton
+				android:text="Mal"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:checked="false"
+				android:id="@+id/q1_0_3"
+				/>
+		</RadioGroup>
+		<TextView
 
-	/>
-<RadioButton
-	android:gravity="center"
-	android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:checked="false"
-	    android:id="@+id/q1_0_3"
-	android:background="@drawable/type3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="top|center_horizontal"
+			android:text="Belle journée ?" />
 
+		<RadioGroup
+			android:id="@+id/q1_1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/q1_0"
+			android:orientation="horizontal" >
 
-	/>
-</RadioGroup>
-<TextView
-        
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
-        android:text="Belle journée ?"
-	/>
+			<RadioButton
+				android:text="Oui"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:checked="true"
+				android:id="@+id/q1_1_1"
+				/>
+			<RadioButton
+				android:text="Non"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:checked="false"
+				android:id="@+id/q1_1_2"
+				/>
+		</RadioGroup>
+		<TextView
 
-<RadioGroup
-        android:id="@+id/q1_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/q1_1"
-        android:orientation="horizontal" >
-        
-<RadioButton
-            android:text="Oui "
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:checked="false"
-	    android:id="@+id/q1_1_1"
-            />
-<RadioButton
-            android:text="Non"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:checked="false"
-	    android:id="@+id/q1_1_2"
-            />
-</RadioGroup>
-<TextView
-        
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center_horizontal"
-        android:text="La famille ?" />
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="top|center_horizontal"
+			android:text="La famille ?" />
 
-<RadioGroup
-        android:id="@+id/q1_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/q1_2"
-        android:orientation="horizontal" >
-        
-<RadioButton
-            android:text="Oui "
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:checked="false"
-	    android:id="@+id/q1_2_1"
-            />
-<RadioButton
-            android:text="Non"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:checked="false"
-	    android:id="@+id/q1_2_2"
-            />
-</RadioGroup>
-<Button
-        android:id="@+id/quest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Next" />
-</LinearLayout>
+		<RadioGroup
+			android:id="@+id/q1_2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/q1_1"
+			android:orientation="horizontal" >
+
+			<RadioButton
+				android:text="Oui"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:checked="true"
+				android:id="@+id/q1_2_1"
+				/>
+			<RadioButton
+				android:text="Non"
+				android:layout_width="100dp"
+				android:layout_height="100dp"
+				android:checked="false"
+				android:id="@+id/q1_2_2"
+				/>
+		</RadioGroup>
+		<Button
+			android:id="@+id/quest"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="Next" />
+	</LinearLayout>
 </ScrollView>
