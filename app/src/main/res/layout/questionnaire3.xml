@@ -19,7 +19,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="top|center_horizontal"
-			android:text="YO" />
+			android:text="rolling stones or beatles" />
 
 		<RadioGroup
 			android:id="@+id/q3_0"
@@ -29,14 +29,14 @@
 			android:orientation="horizontal" >
 
 			<RadioButton
-				android:text="je suis joie"
+				android:text="rs"
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:checked="true"
 				android:id="@+id/q3_0_1"
 				/>
 			<RadioButton
-				android:text="Non"
+				android:text="B !"
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:checked="false"
@@ -48,7 +48,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="top|center_horizontal"
-			android:text="SAlut ? " />
+			android:text="hey ? " />
 
 		<RadioGroup
 			android:id="@+id/q3_1"
@@ -58,14 +58,14 @@
 			android:orientation="horizontal" >
 
 			<RadioButton
-				android:text="Oui"
+				android:text="ho !"
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:checked="true"
 				android:id="@+id/q3_1_1"
 				/>
 			<RadioButton
-				android:text="Non"
+				android:text="No !"
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:checked="false"

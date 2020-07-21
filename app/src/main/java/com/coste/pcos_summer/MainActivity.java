@@ -81,6 +81,7 @@ public class MainActivity extends Activity {
 
     private int dq1_0,aq1_0,dq1_1,aq1_1,dq1_2,aq1_2,dq2_0,aq2_0,dq2_1,aq2_1,dq3_0,aq3_0,dq3_1,aq3_1;
 
+
     private String squiz = null;
     private String ID = null;
 
@@ -255,7 +256,7 @@ public class MainActivity extends Activity {
                 try {
                     Password = encrypt(Password,public_key);
                 } catch (Exception e) {
-                    Toast.makeText(getApplicationContext(), "saloperie" , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "snif" , Toast.LENGTH_SHORT).show();
                 }
                 if(!ID.isEmpty() && !Password.isEmpty() )
                 {
@@ -349,7 +350,7 @@ public class MainActivity extends Activity {
                     //We build the string for the server
                     //1 STANDS FOR REGISTER
                     message = "1^"+ID+"%"+Password+"%"+YearBirth+"%"+FirstVisit+"%"+Date1+"%"+Date2+"%"+textradio;
-
+                    //Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
                     SendMessage sendMessageTask = new SendMessage();
                     sendMessageTask.execute();
 
@@ -404,17 +405,17 @@ public class MainActivity extends Activity {
             RadioGroup radioGroupq1_0;
             radioGroupq1_0 = (RadioGroup)findViewById(R.id.q1_0);
             radioGroupq1_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            //radioGroupq1_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+//radioGroupq1_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
             LoadPreferences(Integer.toString(radioGroupq1_0.getId()),radioGroupq1_0);
             RadioGroup radioGroupq1_1;
             radioGroupq1_1 = (RadioGroup)findViewById(R.id.q1_1);
             radioGroupq1_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            //radioGroupq1_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+//radioGroupq1_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
             LoadPreferences(Integer.toString(radioGroupq1_1.getId()),radioGroupq1_1);
             RadioGroup radioGroupq1_2;
             radioGroupq1_2 = (RadioGroup)findViewById(R.id.q1_2);
             radioGroupq1_2.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            //radioGroupq1_2.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+//radioGroupq1_2.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
             LoadPreferences(Integer.toString(radioGroupq1_2.getId()),radioGroupq1_2);
 
 
@@ -440,12 +441,12 @@ public class MainActivity extends Activity {
             RadioGroup radioGroupq2_0;
             radioGroupq2_0 = (RadioGroup)findViewById(R.id.q2_0);
             radioGroupq2_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            //radioGroupq2_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+//radioGroupq2_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
             LoadPreferences(Integer.toString(radioGroupq2_0.getId()),radioGroupq2_0);
             RadioGroup radioGroupq2_1;
             radioGroupq2_1 = (RadioGroup)findViewById(R.id.q2_1);
             radioGroupq2_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            //radioGroupq2_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+//radioGroupq2_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
             LoadPreferences(Integer.toString(radioGroupq2_1.getId()),radioGroupq2_1);
 
 
@@ -467,16 +468,17 @@ public class MainActivity extends Activity {
             mquest1 = (Button) findViewById(R.id.quest);
             mquest1.setOnClickListener(clickListenerBoutonsMENU);
 
+            //the changelistenerDA is muted cause only one change listener seems to work
 
             RadioGroup radioGroupq3_0;
             radioGroupq3_0 = (RadioGroup)findViewById(R.id.q3_0);
             radioGroupq3_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            //radioGroupq3_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+//radioGroupq3_0.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
             LoadPreferences(Integer.toString(radioGroupq3_0.getId()),radioGroupq3_0);
             RadioGroup radioGroupq3_1;
             radioGroupq3_1 = (RadioGroup)findViewById(R.id.q3_1);
             radioGroupq3_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListener);
-            //radioGroupq3_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
+//radioGroupq3_1.setOnCheckedChangeListener(radioGroupOnCheckedChangeListenerDA);
             LoadPreferences(Integer.toString(radioGroupq3_1.getId()),radioGroupq3_1);
         }
     };
@@ -794,74 +796,70 @@ public class MainActivity extends Activity {
                     SavePreferences(Integer.toString(group.getId()), checkedIndex);
                     //
                     switch(checkedId) {
-                        case R.id.q1_0_1:
-                            dq1_0 = 1;
-                            aq1_0 = 2 ;
-                            break;
-                        case R.id.q1_0_2:
-                            dq1_0 = 1;
-                            aq1_0 = 2 ;
-                            break;
-                        case R.id.q1_0_3:
-                            dq1_0 = 1;
-                            aq1_0 = 2 ;
-                            break;
-                        case R.id.q1_1_1:
-                            dq1_1 = 1;
-                            aq1_1 = 2 ;
-                            break;
-                        case R.id.q1_1_2:
-                            dq1_1 = 1;
-                            aq1_1 = 2 ;
-                            break;
-                        case R.id.q1_2_1:
-                            dq1_2 = 1;
-                            aq1_2 = 2  ;
-                            break;
-                        case R.id.q1_2_2:
-                            dq1_2 = 1;
-                            aq1_2 = 2 ;
-                            break;
-                        case R.id.q2_0_1:
-                            dq2_0 = 1;
-                            aq2_0 = 2  ;
-                            break;
-                        case R.id.q2_0_2:
-                            dq2_0 = 1;
-                            aq2_0 = 2 ;
-                            break;
-                        case R.id.q2_0_3:
-                            dq2_0 = 1;
-                            aq2_0 = 2 ;
-                            break;
-                        case R.id.q2_1_1:
-                            dq2_1 = 1;
-                            aq2_1 = 2 ;
-                            break;
-                        case R.id.q2_1_2:
-                            dq2_1 = 1;
-                            aq2_1 = 2 ;
-                            break;
-                        case R.id.q2_1_3:
-                            dq2_1 = 1;
-                            aq2_1 = 2 ;
-                            break;
-                        case R.id.q3_0_1:
-                            dq3_0 = 1;
-                            aq3_0 = 2 ;
-                            break;
-                        case R.id.q3_0_2:
-                            dq3_0 = 1;
-                            aq3_0 = 2 ;
-                            break;
-                        case R.id.q3_1_1:
-                            dq3_1 = 1;
-                            aq3_1 = 2  ;
-                            break;
-                        case R.id.q3_1_2:
-                            dq3_1 = 1;
-                            aq3_1 = 2 ;
-                            break;
+                            case R.id.q1_0_1:
+                                dq1_0 = 1;
+                                aq1_0 = 2 ;
+                                break;
+                            case R.id.q1_0_2:
+                                dq1_0 = 1;
+                                aq1_0 = 2  ;
+                                break;
+                            case R.id.q1_1_1:
+                                dq1_1 = 1;
+                                aq1_1 = 2 ;
+                                break;
+                            case R.id.q1_1_2:
+                                dq1_1 = 1;
+                                aq1_1 = 2 ;
+                                break;
+                            case R.id.q1_2_1:
+                                dq1_2 = 1;
+                                aq1_2 = 2  ;
+                                break;
+                            case R.id.q1_2_2:
+                                dq1_2 = 1;
+                                aq1_2 = 2 ;
+                                break;
+                            case R.id.q2_0_1:
+                                dq2_0 = 1;
+                                aq2_0 = 2  ;
+                                break;
+                            case R.id.q2_0_2:
+                                dq2_0 = 1;
+                                aq2_0 = 2 ;
+                                break;
+                            case R.id.q2_0_3:
+                                dq2_0 = 1;
+                                aq2_0 = 2 ;
+                                break;
+                            case R.id.q2_1_1:
+                                dq2_1 = 1;
+                                aq2_1 = 2 ;
+                                break;
+                            case R.id.q2_1_2:
+                                dq2_1 = 1;
+                                aq2_1 = 2 ;
+                                break;
+                            case R.id.q2_1_3:
+                                dq2_1 = 1;
+                                aq2_1 = 2 ;
+                                break;
+                            case R.id.q3_0_1:
+                                dq3_0 = 1;
+                                aq3_0 = 2 ;
+                                break;
+                            case R.id.q3_0_2:
+                                dq3_0 = 1;
+                                aq3_0 = 2 ;
+                                break;
+                            case R.id.q3_1_1:
+                                dq3_1 = 1;
+                                aq3_1 = 2  ;
+                                break;
+                            case R.id.q3_1_2:
+                                dq3_1 = 1;
+                                aq3_1 = 2 ;
+                                break;
                     }
                 }};
 
@@ -1010,7 +1008,7 @@ public class MainActivity extends Activity {
             if (data == "") {
                 enter = "Data1" + "$" +enter +"$"+Integer.toString(score_anxiety)+"$"+Integer.toString(score_depression)+"\n" ;
                 out.write(enter.getBytes());
-                out1.write(("Data1$"+java.time.LocalDate.now()).getBytes());
+                out1.write(("Data1$"+java.time.LocalDate.now()+"\n").getBytes());
                 out.close();
                 out1.close();
                 Toast.makeText(v.getContext(), "File saved!", Toast.LENGTH_SHORT).show();
@@ -1020,7 +1018,7 @@ public class MainActivity extends Activity {
                 String firstWord = arr[0];
                 enter = getTheGoodShared(firstWord, "Data", 1) + "$" + enter+"$"+Integer.toString(score_anxiety)+"$"+Integer.toString(score_depression)+"\n";
                 out.write(enter.getBytes());
-                out1.write((getTheGoodShared(firstWord, "Data", 1)+"$"+java.time.LocalDate.now()).getBytes());
+                out1.write((getTheGoodShared(firstWord, "Data", 1)+"$"+java.time.LocalDate.now()+"\n").getBytes());
                 out.close();
                 out1.close();
                 Toast.makeText(v.getContext(), "File saved!", Toast.LENGTH_SHORT).show();

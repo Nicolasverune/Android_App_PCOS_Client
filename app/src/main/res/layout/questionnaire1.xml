@@ -19,7 +19,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="top|center_horizontal"
-			android:text="Comment ca va ? " />
+			android:text="How are you ? " />
 
 		<RadioGroup
 			android:id="@+id/q1_0"
@@ -29,25 +29,18 @@
 			android:orientation="horizontal" >
 
 			<RadioButton
-				android:text="Bien"
+				android:text="Good"
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:checked="true"
 				android:id="@+id/q1_0_1"
 				/>
 			<RadioButton
-				android:text="Moyen"
+				android:text="Bad"
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:checked="false"
 				android:id="@+id/q1_0_2"
-				/>
-			<RadioButton
-				android:text="Mal"
-				android:layout_width="100dp"
-				android:layout_height="100dp"
-				android:checked="false"
-				android:id="@+id/q1_0_3"
 				/>
 		</RadioGroup>
 		<TextView
@@ -55,7 +48,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="top|center_horizontal"
-			android:text="Belle journée ?" />
+			android:text="Nice day ?" />
 
 		<RadioGroup
 			android:id="@+id/q1_1"
@@ -84,7 +77,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="top|center_horizontal"
-			android:text="La famille ?" />
+			android:text="is your family good ?" />
 
 		<RadioGroup
 			android:id="@+id/q1_2"
@@ -94,14 +87,14 @@
 			android:orientation="horizontal" >
 
 			<RadioButton
-				android:text="Oui"
+				android:text="yes"
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:checked="true"
 				android:id="@+id/q1_2_1"
 				/>
 			<RadioButton
-				android:text="Non"
+				android:text="No"
 				android:layout_width="100dp"
 				android:layout_height="100dp"
 				android:checked="false"
